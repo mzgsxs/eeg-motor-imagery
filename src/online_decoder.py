@@ -57,7 +57,7 @@ csp_num = 4
 def fit_model():
   # standard training data and model fitting
   subject = 1
-  runs = [6, 10, 14]  # motor imagery: hands vs feet
+  runs = [4, 8, 12]  # motor imagery: hands vs feet
   raw_fnames = eegbci.load_data(subject, runs)
   raw = concatenate_raws([read_raw_edf(f, preload=True) for f in raw_fnames])
   train_win_size = int(raw.info['sfreq']*win_duration) 
